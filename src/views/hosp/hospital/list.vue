@@ -151,7 +151,7 @@ export default {
 
       hospitalApi.getPageList(this.page, this.limit, this.searchObj).then(
         response => {
-          debugger
+          // debugger
           this.list = response.data.content
           this.total = response.data.totalElements
 
@@ -193,7 +193,7 @@ export default {
     },
 
     provinceChanged() {
-      debugger
+      // debugger
       this.cityList = []
       this.searchObj.cityCode = null
       this.districtList = []

@@ -109,7 +109,7 @@ export default {
       debugger
       userInfoApi.getPageList(this.page, this.limit, this.searchObj).then(
         response => {
-          debugger
+          // debugger
           this.list = response.data.records
           this.total = response.data.total
 

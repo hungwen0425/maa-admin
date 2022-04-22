@@ -160,7 +160,7 @@ export default {
     },
 
     handleNodeClick(data) {
-      debugger
+      // debugger
       // 科室大类直接返回
       if (data.children != null) return
       this.depcode = data.depcode

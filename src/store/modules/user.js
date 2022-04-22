@@ -82,13 +82,13 @@ const user = {
     },
 
     GetInfo({ commit }) {
-      debugger
+      // debugger
       const data = {
         'roles': [
           'admin'
         ],
-        'name': 'p2p',
-        'avatar': 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-5670helen3b4acafe.gif'
+         'name': 'p2p'
+        //, 'avatar': 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-5670helen3b4acafe.gif'
       }
       if (data.roles && data.roles.length > 0) { // 验证返回的roles是否是一个非空数组
         commit('SET_ROLES', data.roles)

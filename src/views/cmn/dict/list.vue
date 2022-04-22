@@ -93,7 +93,7 @@ export default {
     },
 
     getChildrens(tree, treeNode, resolve) {
-      debugger
+      // debugger
       dictApi.findByParentId(tree.id).then(response => {
         resolve(response.data)
       })
