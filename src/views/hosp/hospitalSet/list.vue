@@ -51,7 +51,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column label="操作" width="280" align="center">
+      <el-table-column label="操作" width="380" align="center">
         <template slot-scope="scope">
           <router-link :to="'/hosp/hospitalSet/edit/'+scope.row.id">
             <el-button type="primary" size="mini" icon="el-icon-edit"></el-button>

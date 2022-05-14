@@ -85,7 +85,7 @@ export default {
     // 调用api层获取数据库中的数据
     fetchData() {
       console.log('加载列表')
-      dictApi.findByParentId(1).then(response => {
+      dictApi.dictList(1).then(response => {
         this.list = response.data
         console.log(this.list)
         this.listLoading = false
@@ -94,7 +94,7 @@ export default {
 
     getChildrens(tree, treeNode, resolve) {
       // debugger
-      dictApi.findByParentId(tree.id).then(response => {
+      dictApi.dictList(tree.id).then(response => {
         resolve(response.data)
       })
     },
