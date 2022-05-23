@@ -1,4 +1,4 @@
-# yygh-admin-master
+# mma-admin
 
 > 這是一個極簡的 vue admin 管理後台 它只包含了 Element UI & axios & iconfont & permission control & lint，這些搭建後台必要的東西。
 
@@ -7,7 +7,7 @@
 
 ```bash
 # Clone project
-git clone https://github.com/hungwen0425/yygh-admin-master.git
+git clone https://github.com/hungwen0425/mma-admin.git
 
 # Install dependencies
 npm install

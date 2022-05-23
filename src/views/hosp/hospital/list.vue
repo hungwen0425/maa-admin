@@ -28,7 +28,7 @@
         </el-select>
       </el-form-item>
 
-      <el-form-item>
+      <!-- <el-form-item>
         <el-select
           v-model="searchObj.districtCode"
           placeholder="请选择区">
@@ -38,7 +38,7 @@
             :label="item.name"
             :value="item.id"/>
         </el-select>
-      </el-form-item>
+      </el-form-item> -->
 
       <el-form-item>
         <el-input v-model="searchObj.hosname" placeholder="医院名称"/>
@@ -111,7 +111,6 @@
 
 <script>
 import hospitalApi from '@/api/hosp/hospital'
-import dictApi from '@/api/cmn/dict'
 export default {
   data() {
     return {
@@ -132,7 +131,7 @@ export default {
     console.log('list created......')
     this.fetchData()
 
-    dictApi.findByDictCode('Province').then(response => {
+    hospitalApi.findByDictCode('Province').then(response => {
       this.provinceList = response.data
     })
   },
@@ -192,21 +191,23 @@ export default {
       })
     },
 
+    //根据dictCode获取下级节点
     provinceChanged() {
       // debugger
       this.cityList = []
       this.searchObj.cityCode = null
       this.districtList = []
       this.searchObj.districtCode = null
-      dictApi.findByParentId(this.searchObj.provinceCode).then(response => {
+      hospitalApi.findByParentId(this.searchObj.provinceCode).then(response => {
         this.cityList = response.data
       })
     },
 
+    //根据上级id获取子节点数据列表
     cityChanged() {
       this.districtList = []
       this.searchObj.districtCode = null
-      dictApi.findByParentId(this.searchObj.cityCode).then(response => {
+      hospitalApi.findByParentId(this.searchObj.cityCode).then(response => {
         this.districtList = response.data
       })
     }

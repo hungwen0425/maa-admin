@@ -12,6 +12,22 @@ export default {
     })
   },
 
+  //根据dictCode获取下级节点
+  findByDictCode(dictCode){
+    return request({
+      url: `/admin/cmn/dict/findByDictCode/${dictCode}`,
+      method: 'get'
+    })
+  },
+
+  //根据上级id获取子节点数据列表
+  findByParentId(parentId){
+    return request({
+      url: `/admin/cmn/dict/findByParentId/${parentId}`,
+      method: 'get'
+    })
+  },
+
   updateStatus(id, status) {
     return request({
       url: `${api_name}/updateStatus/${id}/${status}`,
