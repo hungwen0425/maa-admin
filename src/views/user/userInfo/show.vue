@@ -6,7 +6,7 @@
       <tbody>
       <tr>
         <th width="15%">手机号</th>
-        <td width="35%"><b>{{ userInfo.mobile }}</b></td>
+        <td width="35%"><b>{{ userInfo.phone }}</b></td>
         <th width="15%">用户姓名</th>
         <td width="35%">{{ userInfo.name }}</td>
       </tr>
