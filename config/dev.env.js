@@ -3,7 +3,8 @@ const merge = require('webpack-merge')
 const prodEnv = require('./prod.env')
 
 module.exports = merge(prodEnv, {
-  NODE_ENV: '"development"',
+  // NODE_ENV: '"development"',
   // BASE_API: '"http://localhost"',
+  NODE_ENV: '"prroduction"',
   BASE_API: '"http://139.198.160.215:32607/"'
 })
