@@ -35,7 +35,7 @@ pipeline {
             steps {
                 container('nodejs') {
                     sh 'ls'
-                    sh 'docker build -t maa-admin:latest -f Dockerfile  .'
+                    sh 'docker build -t maa-admin:latest -f maa-admin/Dockerfile ./maa-admin'
                 }
 
             }
@@ -59,7 +59,7 @@ pipeline {
         stage('部署到dev环境') {
             agent none
             steps {
-                kubernetesDeploy(configs: 'deploy/**', enableConfigSubstitution: true, kubeconfigId: "$KUBECONFIG_CREDENTIAL_ID")
+                kubernetesDeploy(configs: 'maa-admin/deploy/**', enableConfigSubstitution: true, kubeconfigId: "$KUBECONFIG_CREDENTIAL_ID")
             }
         }
 
