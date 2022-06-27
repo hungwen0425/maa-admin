@@ -45,8 +45,8 @@ pipeline {
             agent none
             steps {
                 container('nodejs') {
-                    withCredentials([usernamePassword(credentialsId : 'aliyun-docker-registry' ,usernameVariable : 'DOCKER_USERNAME' ,passwordVariable : 'DOCKER_PASSWORD' ,)]) {
-                        sh 'echo "$DOCKER_PASSWORD" | docker login $REGISTRY -u "$DOCKER_USDOCKER_USERNAMEER_VAR" --password-stdin'
+                    withCredentials([usernamePassword(credentialsId : 'dockerhub-id' ,usernameVariable : 'DOCKER_USERNAME' ,passwordVariable : 'DOCKER_PASSWORD' ,)]) {
+                        sh 'echo "$DOCKER_PASSWORD" | docker login $REGISTRY -u "$DOCKER_USERNAME" --password-stdin'
                         sh 'docker tag maa-admin:latest $REGISTRY/$DOCKERHUB_NAMESPACE/maa-admin:SNAPSHOT-$BUILD_NUMBER'
                         sh 'docker push  $REGISTRY/$DOCKERHUB_NAMESPACE/yygh-admin:SNAPSHOT-$BUILD_NUMBER'
                     }
