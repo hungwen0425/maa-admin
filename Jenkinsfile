@@ -77,10 +77,8 @@ pipeline {
         DOCKER_CREDENTIAL_ID = 'dockerhub-id'
         GITHUB_CREDENTIAL_ID = 'github-id'
         KUBECONFIG_CREDENTIAL_ID = 'demo-kubeconfig'
-        REGISTRY = 'registry.cn-hangzhou.aliyuncs.com'
-        DOCKERHUB_NAMESPACE = 'lfy_hello'
-        GITHUB_ACCOUNT = 'kubesphere'
-        APP_NAME = 'devops-java-sample'
-        ALIYUNHUB_NAMESPACE = 'lfy_hello'
+        REGISTRY = 'docker.io'
+        GITHUB_ACCOUNT = 'hungwen0425'
+        DOCKERHUB_NAMESPACE = 'hungwen0425'
     }
 }
