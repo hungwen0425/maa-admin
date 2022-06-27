@@ -35,7 +35,7 @@ pipeline {
             steps {
                 container('nodejs') {
                     sh 'ls'
-                    sh 'docker build -t yygh-admin:latest -f Dockerfile  .'
+                    sh 'docker build -t maa-admin:latest -f Dockerfile  .'
                 }
 
             }
